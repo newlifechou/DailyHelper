@@ -1,0 +1,21 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="DialyHelper.Login"
+	x:Name="Window"
+	Title="Login"
+	Width="450" Height="375" Icon="shit.png" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" HorizontalAlignment="Center" FontSize="36" Margin="0,42,0,10" Content="DailyHelper" Foreground="#FF002EFF" FontFamily="SketchFlow Print" FontWeight="Bold"/>
+        <Label Grid.Row="1" HorizontalAlignment="Center" Content="Please enter your passcode below the textbox" Margin="0,10,0,0" Foreground="#FF999999" FontSize="11"/>
+		<PasswordBox x:Name="txtPassCode" Width="{DynamicResource txtWidth200}" Grid.Row="2" Margin="0,10" FontSize="18"/>
+        <Button x:Name="btnUnLock" Content="UnLock" Grid.Row="3" Height="60" Width="160" Margin="0,40,0,0" FontSize="16" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
