@@ -58,5 +58,33 @@ namespace DialyHelper.DBCode
             }
             return dr;
         }
+
+        /// <summary>
+        /// GetDBSchalar
+        /// </summary>
+        /// <param name="sqlcmd"></param>
+        /// <param name="paras"></param>
+        /// <returns>object</returns>
+        public object GetDBSchalar(string sqlcmd, OleDbParameter[] paras)
+        {
+            cmd.CommandText = sqlcmd;
+            foreach (var para in paras)
+            {
+                cmd.Parameters.Add(para);
+            }
+
+            object value;
+            try
+            {
+                con.Open();
+                value = cmd.ExecuteScalar();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            return value;
+        }
     }
 }
