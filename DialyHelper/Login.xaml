@@ -5,7 +5,7 @@
 	x:Name="Window"
 	Title="Login" Width="300" Height="300"
     WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="Images/calendar_green.png"
-    WindowStyle="None" MouseLeftButtonDown="Window_MouseLeftButtonDown">
+    WindowStyle="None" MouseLeftButtonDown="Window_MouseLeftButtonDown" BorderBrush="LightSteelBlue" BorderThickness="3">
     <Grid x:Name="LayoutRoot" Margin="15,5">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
