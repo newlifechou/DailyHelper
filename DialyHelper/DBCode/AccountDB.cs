@@ -19,8 +19,8 @@ namespace DialyHelper
             string sqlcmd = "select count(*) from account where password=@password";
             OleDbParameter password = new OleDbParameter("@password", account.Password);
             OleDbParameter[] paras ={password};
-            bool result = (bool)db.GetDBSchalar(sqlcmd, paras);
-            if (result)
+            int result = (int)db.GetDBSchalar(sqlcmd, paras);
+            if (result>0)
             {
                 return true;
             }
