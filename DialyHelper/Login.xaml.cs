@@ -51,6 +51,10 @@ namespace DialyHelper
                     MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
+            else
+            {
+                txtLogInfo.Text = "Unlock code is not allowed to be null!";
+            }
         }
     }
 }

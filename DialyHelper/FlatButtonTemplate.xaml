@@ -1,0 +1,29 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero">
+	<!-- Resource dictionary entries should be defined here. -->
+	<ControlTemplate x:Key="FlatButtonBaseControlTemplate" TargetType="{x:Type ButtonBase}">
+		<Border x:Name="Chrome" CornerRadius="5" SnapsToDevicePixels="True" Background="Orange" BorderBrush="Black" BorderThickness="1" >
+			<ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}"
+			 Content="{TemplateBinding Content}"
+			 ContentStringFormat="{TemplateBinding ContentStringFormat}"
+			 HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+			 Margin="{TemplateBinding Padding}" 
+			 RecognizesAccessKey="True"
+			 SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+			 VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+		</Border>
+		<ControlTemplate.Triggers>
+			<Trigger Property="IsMouseOver" Value="True">
+				<Setter Property="Background" TargetName="Chrome" Value="#FF634613"/>
+			</Trigger>
+			<Trigger Property="IsEnabled" Value="False">
+				<Setter Property="Foreground" Value="#FFADADAD"/>
+			</Trigger>
+			<Trigger Property="IsPressed" Value="True">
+				<Setter Property="Background" TargetName="Chrome" Value="#FF362912"/>
+			</Trigger>
+		</ControlTemplate.Triggers>
+	</ControlTemplate>
+</ResourceDictionary>
