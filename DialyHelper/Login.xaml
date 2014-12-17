@@ -24,7 +24,7 @@
                             <DrawingImage.Drawing>
                                 <DrawingGroup>
                                     <DrawingGroup.Children>
-                                        <GeometryDrawing Brush="#FF0000FF" Geometry="F1 M 48.025,0.499992L 178.423,131.024L 308.947,0.62603L 356.301,48.0251L 225.776,178.423L 356.175,308.947L 308.776,356.301L 178.377,225.776L 47.8533,356.175L 0.5,308.776L 131.024,178.377L 0.625961,47.8533L 48.025,0.499992 Z ">
+                                        <GeometryDrawing Brush="#FFFF0000" Geometry="F1 M 48.025,0.499992L 178.423,131.024L 308.947,0.62603L 356.301,48.0251L 225.776,178.423L 356.175,308.947L 308.776,356.301L 178.377,225.776L 47.8533,356.175L 0.5,308.776L 131.024,178.377L 0.625961,47.8533L 48.025,0.499992 Z ">
                                             <GeometryDrawing.Pen>
                                                 <Pen LineJoin="Round" Brush="#FF000000"/>
                                             </GeometryDrawing.Pen>
