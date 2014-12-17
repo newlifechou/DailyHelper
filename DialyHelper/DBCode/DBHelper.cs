@@ -81,8 +81,11 @@ namespace DialyHelper
             }
             catch (Exception ex)
             {
-
                 throw ex;
+            }
+            finally
+            {
+                con.Close();
             }
             return value;
         }
