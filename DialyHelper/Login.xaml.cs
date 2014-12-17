@@ -13,17 +13,17 @@ using DialyHelper.Models;
 
 namespace DialyHelper
 {
-	/// <summary>
-	/// Login.xaml 的交互逻辑
-	/// </summary>
-	public partial class Login : Window
-	{
-		public Login()
-		{
-			this.InitializeComponent();
-			
-			// 在此点之下插入创建对象所需的代码。
-		}
+    /// <summary>
+    /// Login.xaml 的交互逻辑
+    /// </summary>
+    public partial class Login : Window
+    {
+        public Login()
+        {
+            this.InitializeComponent();
+
+            // 在此点之下插入创建对象所需的代码。
+        }
 
         private void btnunlock_Click(object sender, RoutedEventArgs e)
         {
@@ -32,17 +32,25 @@ namespace DialyHelper
             if (!string.IsNullOrEmpty(account.Password))
             {
                 AccountDB adb = new AccountDB();
-                if (adb.LogIn(account))
+                try
                 {
-                    MainWindow mw = new MainWindow();
-                    this.Close();
-                    mw.Show();
+                    if (adb.LogIn(account))
+                    {
+                        MainWindow mw = new MainWindow();
+                        this.Close();
+                        mw.Show();
+                    }
+                    else
+                    {
+                       txtLogInfo.Text="Unlock Code is Wrong!";
+                       txtpassword.Password = "";
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Unlock Code is Wrong!");
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
         }
-	}
+    }
 }
