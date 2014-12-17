@@ -3,10 +3,12 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	x:Class="DialyHelper.Login"
 	x:Name="Window"
-	Title="Login"
-	Width="300" Height="300" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="Images/calendar_green.png">
-    <Grid x:Name="LayoutRoot" Margin="5">
+	Title="Login" Width="300" Height="300"
+    WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="Images/calendar_green.png"
+    WindowStyle="None" MouseLeftButtonDown="Window_MouseLeftButtonDown">
+    <Grid x:Name="LayoutRoot" Margin="15,5">
         <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
@@ -14,10 +16,31 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Text="Daily Helper" HorizontalAlignment="Center" FontSize="40" FontFamily="/DialyHelper;component/Fonts/#Tekton Pro" Foreground="Blue"></TextBlock>
-        <TextBlock Grid.Row="1" Text="Enter your unlock code below:" />
-        <PasswordBox Name="txtpassword" Grid.Row="2" Margin="5" FontSize="24"/>
-        <Button Name="btnunlock" Grid.Row="3" Content="Unlock"  Click="btnunlock_Click" IsDefault="True" Template="{DynamicResource FlatButtonBaseControlTemplate}" FontSize="16"/>
-        <TextBlock Name="txtLogInfo" Grid.Row="4" Foreground="Red"/>
+        <Button Name="btnClose" Click="btnClose_Click" Style="{x:Null}" Grid.Row="0" HorizontalAlignment="Right" Template="{DynamicResource WindowButtonBaseControlTemplate}" Height="24" Width="24">
+			<Button.Content>
+                <Image Stretch="Fill">
+                    <Image.Source>
+                        <DrawingImage>
+                            <DrawingImage.Drawing>
+                                <DrawingGroup>
+                                    <DrawingGroup.Children>
+                                        <GeometryDrawing Brush="#FF0000FF" Geometry="F1 M 48.025,0.499992L 178.423,131.024L 308.947,0.62603L 356.301,48.0251L 225.776,178.423L 356.175,308.947L 308.776,356.301L 178.377,225.776L 47.8533,356.175L 0.5,308.776L 131.024,178.377L 0.625961,47.8533L 48.025,0.499992 Z ">
+                                            <GeometryDrawing.Pen>
+                                                <Pen LineJoin="Round" Brush="#FF000000"/>
+                                            </GeometryDrawing.Pen>
+                                        </GeometryDrawing>
+                                    </DrawingGroup.Children>
+                                </DrawingGroup>
+                            </DrawingImage.Drawing>
+                        </DrawingImage>
+                    </Image.Source>
+                </Image>
+			</Button.Content>
+		</Button>
+        <TextBlock Grid.Row="1" Text="Daily Helper" HorizontalAlignment="Center" FontSize="40" FontFamily="/DialyHelper;component/Fonts/#Tekton Pro" Foreground="Blue"></TextBlock>
+        <TextBlock Grid.Row="2" Text="Enter your unlock code below:" />
+        <PasswordBox Name="txtpassword" Grid.Row="3" Margin="5" FontSize="24"/>
+        <Button Name="btnunlock" Grid.Row="4" Content="Unlock"  Click="btnunlock_Click" IsDefault="True" Template="{DynamicResource FlatButtonBaseControlTemplate}" FontSize="16"/>
+        <TextBlock Name="txtLogInfo" Grid.Row="5" Foreground="Red"/>
     </Grid>
 </Window>
