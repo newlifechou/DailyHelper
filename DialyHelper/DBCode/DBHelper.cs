@@ -8,7 +8,7 @@ using System.Data.OleDb;
 
 using System.Configuration;
 
-namespace DialyHelper.DBCode
+namespace DialyHelper
 {
     /// <summary>
     /// DB Operation Class

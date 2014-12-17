@@ -16,6 +16,6 @@
         <TextBlock Grid.Row="0" Text="Daily Helper" HorizontalAlignment="Center" FontSize="40" FontFamily="/DialyHelper;component/Fonts/#Tekton Pro" Margin="0,10" Foreground="Blue"></TextBlock>
         <TextBlock Grid.Row="1" Text="Enter your unlock code below:" Margin="5"/>
         <PasswordBox Name="txtpassword" Grid.Row="2" Margin="5" FontSize="24" HorizontalContentAlignment="Center"/>
-        <Button Name="btnunlock" Grid.Row="3" Content="Unlock" Margin="5,-1,5,5" Padding="5,10"/>
+        <Button Name="btnunlock" Grid.Row="3" Content="Unlock" Margin="5,-1,5,5" Padding="5,10" Click="btnunlock_Click"/>
     </Grid>
 </Window>

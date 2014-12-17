@@ -6,7 +6,7 @@ using System.Data;
 using System.Data.OleDb;
 using DialyHelper.Models;
 
-namespace DialyHelper.DBCode
+namespace DialyHelper
 {
     /// <summary>
     /// Account Stuff

@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using DialyHelper.Models;
 
 namespace DialyHelper
 {
@@ -23,5 +24,25 @@ namespace DialyHelper
 			
 			// 在此点之下插入创建对象所需的代码。
 		}
+
+        private void btnunlock_Click(object sender, RoutedEventArgs e)
+        {
+            Account account = new Account();
+            account.Password = txtpassword.Password;
+            if (!string.IsNullOrEmpty(account.Password))
+            {
+                AccountDB adb = new AccountDB();
+                if (adb.LogIn(account))
+                {
+                    MainWindow mw = new MainWindow();
+                    this.Close();
+                    mw.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Unlock Code is Wrong!");
+                }
+            }
+        }
 	}
 }
