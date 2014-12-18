@@ -39,7 +39,22 @@
         <!--MenuBar-->
         <Menu Name="mainmenu" Grid.Row="1" IsMainMenu="True" Style="{StaticResource mainmenustyle}">
             <MenuItem Header="Start">
+                <MenuItem Header="Refresh"/>
                 <MenuItem Header="Exit"/>
+            </MenuItem>
+            <MenuItem Header="Plan">
+                <MenuItem Header="View"/>
+                <Separator/>
+                <MenuItem Header="Add"/>
+                <MenuItem Header="Edit"/>
+                <MenuItem Header="Delete"/>
+            </MenuItem>
+            <MenuItem Header="Fee">
+                <MenuItem Header="View"/>
+                <Separator/>
+                <MenuItem Header="Add"/>
+                <MenuItem Header="Edit"/>
+                <MenuItem Header="Delete"/>
             </MenuItem>
         </Menu>
         <!--MainBody-->

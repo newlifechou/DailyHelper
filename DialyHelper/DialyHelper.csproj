@@ -114,6 +114,7 @@
   <ItemGroup>
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Fee.cs" />
+    <Compile Include="DBCode\FeeDB.cs" />
     <Compile Include="Models\Plan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

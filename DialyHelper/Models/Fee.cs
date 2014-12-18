@@ -14,6 +14,6 @@ namespace DialyHelper.Models
         public Decimal Cost { get; set; }
         public bool HaveInvoice { get; set; }
         public bool IsReimburse { get; set; }
-        public DateTime ReimburseTime { get; set; }
+        public Nullable<DateTime> ReimburseTime { get; set; }
     }
 }

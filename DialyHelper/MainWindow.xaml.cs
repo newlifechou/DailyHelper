@@ -32,9 +32,13 @@ namespace DialyHelper
         /// </summary>
         private void LoadData()
         {
-            PlanDB db = new PlanDB();
-            List<Plan> plans = db.GetPlans();
+            PlanDB plandb = new PlanDB();
+            List<Plan> plans = plandb.GetPlans();
             lstPlan.ItemsSource = plans;
+
+            FeeDB feedb=new FeeDB();
+            List<Fee> fees = feedb.GetFeeList();
+            lstFee.ItemsSource = fees;
         }
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

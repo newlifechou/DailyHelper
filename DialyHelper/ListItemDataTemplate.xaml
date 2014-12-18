@@ -9,12 +9,6 @@
                 </Grid.ColumnDefinitions>
                 <TextBlock Grid.Column="0" FontSize="30"  TextAlignment="Center" Text="{Binding Path=Priority}" Width="50" VerticalAlignment="Center"/>
                 <Grid Grid.Column="1">
-                    <Grid.Resources>
-                        <Style TargetType="{x:Type TextBlock}">
-                            <Setter Property="Margin" Value="2"/>
-                            <Setter Property="Padding" Value="2"/>
-                        </Style>
-                    </Grid.Resources>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto"/>
                         <RowDefinition Height="auto"/>
@@ -36,9 +30,11 @@
     </DataTemplate>
 
     <DataTemplate x:Key="lstFeeDT">
-        <Border BorderBrush="LightBlue" BorderThickness="1" CornerRadius="4" Padding="4">
+        <Border BorderBrush="LightBlue" BorderThickness="1" CornerRadius="4" Padding="4" Margin="5">
             <StackPanel>
-                <TextBlock Text="{Binding Path=ItemTitle}"/>
+                <TextBlock Text="{Binding Path=ItemContent}"/>
+                <TextBlock Text="{Binding Path=ItemTime,StringFormat={}{0:yyyy-MM-dd}}"/>
+                <TextBlock Text="{Binding Path=Cost,StringFormat={}{0:C}}"/>
             </StackPanel>
         </Border>
     </DataTemplate>
