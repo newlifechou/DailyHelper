@@ -37,9 +37,9 @@
         <Border Grid.Row="2" BorderBrush="Blue" BorderThickness="2" CornerRadius="5" HorizontalAlignment="Center">
             <Image Name="imgportrait"  Source="Images/cccat.jpg" Height="64" Width="64" Stretch="Fill"/>
         </Border>
-        <TextBlock Grid.Row="3" Text="Enter your unlock code below:" />
+        <TextBlock Grid.Row="3" Text="Enter your unlock code below:" Style="{StaticResource textblockstyle}" />
         <PasswordBox Name="txtpassword" Grid.Row="4" Margin="5" FontSize="24"/>
-        <Button Name="btnunlock" Grid.Row="5" Content="Unlock"  Click="btnunlock_Click" IsDefault="True" Template="{DynamicResource FlatButtonBaseControlTemplate}" FontSize="16"/>
-        <TextBlock Name="txtLogInfo" Grid.Row="6" Foreground="Red"/>
+        <Button Name="btnunlock" Grid.Row="5" Content="Unlock" Style="{StaticResource buttonstyle}"  Click="btnunlock_Click" IsDefault="True" Template="{DynamicResource FlatButtonBaseControlTemplate}" FontSize="16"/>
+        <TextBlock Name="txtLogInfo" Grid.Row="6" Foreground="Red" Style="{StaticResource textblockstyle}"/>
     </Grid>
 </Window>

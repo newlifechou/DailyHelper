@@ -6,6 +6,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
@@ -17,7 +18,7 @@
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
             <Image Source="Images/calendar_green.png" Grid.Column="0" Height="16" Width="16" Margin="10,0,0,0"/>
-            <TextBlock Name="WindowTitle" Grid.Column="1" Text="DailyHelper" />
+            <TextBlock Name="WindowTitle" Grid.Column="1" Text="DailyHelper" Style="{StaticResource textblockstyle}" />
             <Button Name="btnMin" Style="{StaticResource WindowControlButtonStyle}" Grid.Column="2">
                 <Button.Content>
                     <StaticResource ResourceKey="MinImage"/>
@@ -34,7 +35,12 @@
                 </Button.Content>
             </Button>
         </Grid>
-        <Grid Grid.Row="1">
+        <Menu Name="mainmenu" Grid.Row="1" IsMainMenu="True" Style="{StaticResource mainmenustyle}">
+            <MenuItem Header="Start">
+                <MenuItem Header="Exit"/>
+            </MenuItem>
+        </Menu>
+        <Grid Grid.Row="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="2*"/>
                 <RowDefinition Height="*"/>
@@ -44,11 +50,11 @@
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>           
             <!--lstPlan-->
-            <ListBox Name="lstPlan" Grid.Row="0" Grid.Column="0" DisplayMemberPath="Title">
+            <ListBox Name="lstPlan" Grid.Row="0" Grid.Column="0" DisplayMemberPath="Title" Style="{StaticResource listboxstyle}">
                 
             </ListBox>
             <!--lstFee-->
-            <ListBox Name="lstFee" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Width="200">
+            <ListBox Name="lstFee" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Width="200" Style="{StaticResource listboxstyle}">
                 
             </ListBox>
         </Grid>
