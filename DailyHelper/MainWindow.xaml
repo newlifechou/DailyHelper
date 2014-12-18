@@ -14,19 +14,10 @@
                 <MenuItem Header="Refresh"/>
                 <MenuItem Header="Exit" Click="MenuItem_Click"/>
             </MenuItem>
-            <MenuItem Header="Plan">
-                <MenuItem Header="View"/>
+            <MenuItem Header="Edit">
+                <MenuItem Header="Plan View"  Click="menuEditPlan_Click"/>
                 <Separator/>
-                <MenuItem Header="Add"/>
-                <MenuItem Header="Edit" Name="menuEditPlan" Click="menuEditPlan_Click"/>
-                <MenuItem Header="Delete"/>
-            </MenuItem>
-            <MenuItem Header="Fee">
-                <MenuItem Header="View"/>
-                <Separator/>
-                <MenuItem Header="Add"/>
-                <MenuItem Header="Edit"/>
-                <MenuItem Header="Delete"/>
+                <MenuItem Header="Fee  View"/>
             </MenuItem>
             <MenuItem Header="Help">
                 <MenuItem Header="About"/>
@@ -46,7 +37,7 @@
             <TextBlock Grid.Row="0" Grid.Column="0" Text="Plans" TextAlignment="Center" Background="Orange" FontSize="16" Padding="5,3"/>
             <TextBlock Grid.Row="0" Grid.Column="1" Text="Fees"  TextAlignment="Center" Background="LightSalmon" FontSize="16"  Padding="5,3"/>
             <!--lstPlan-->
-            <ListBox Name="lstPlan" Grid.Row="1" Grid.Column="0" Style="{StaticResource lstPlanStyle}" SelectedIndex="0" />
+            <ListBox Name="lstPlan" Grid.Row="1" Grid.Column="0" Style="{StaticResource lstStyle}" ItemTemplate="{StaticResource lstPlanDT}" SelectedIndex="0" />
             <!--lstPlanDetails-->
             <Border Grid.Row="2" Grid.Column="0"  Style="{StaticResource borderstyle}">
                 <ScrollViewer HorizontalScrollBarVisibility="Disabled">
@@ -95,7 +86,7 @@
                 </ScrollViewer>
             </Border>
             <!--lstFee-->
-            <ListBox Name="lstFee" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Width="200" Style="{StaticResource lstFeeStyle}"/>
+            <ListBox Name="lstFee" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Width="200" Style="{StaticResource lstStyle}" ItemTemplate="{StaticResource lstFeeDT}"/>
         </Grid>
     </Grid>
 </Window>

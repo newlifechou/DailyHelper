@@ -21,7 +21,7 @@
             <Image Name="imgportrait"  Source="Images/cccat.jpg" Height="64" Width="64" Stretch="Fill"/>
         </Border>
         <TextBlock Grid.Row="2" Text="Enter your unlock code below:" Style="{StaticResource textblockstyle}" />
-        <PasswordBox Name="txtpassword" Grid.Row="3" Margin="5" FontSize="24"/>
+        <PasswordBox Name="txtpassword" Grid.Row="3" Margin="5" FontSize="24" Style="{StaticResource FlatPasswordBoxStyle}"/>
         <Button Name="btnunlock" Grid.Row="4" Content="Unlock"  Click="btnunlock_Click" IsDefault="True" FontSize="16" Style="{StaticResource buttonstyle}"/>
         <TextBlock Name="txtLogInfo" Grid.Row="5" Foreground="Red" Style="{StaticResource textblockstyle}"/>
     </Grid>

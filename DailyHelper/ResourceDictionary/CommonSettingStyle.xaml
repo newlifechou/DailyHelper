@@ -11,25 +11,10 @@
         </Setter>
     </Style>
     <!--ListBoxStyle-->
-    <Style x:Key="lstPlanStyle" TargetType="{x:Type ListBox}">
+    <Style x:Key="lstStyle" TargetType="{x:Type ListBox}">
         <Setter Property="Margin" Value="2"/>
         <Setter Property="BorderBrush" Value="LightBlue"/>
         <Setter Property="Margin" Value="5"/>
         <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-        <Setter Property="ItemTemplate">
-            <Setter.Value>
-                <StaticResourceExtension ResourceKey="lstPlanDT"/>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    <Style x:Key="lstFeeStyle" TargetType="{x:Type ListBox}">
-        <Setter Property="BorderBrush" Value="LightBlue"/>
-        <Setter Property="Margin" Value="5"/>
-        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-        <Setter Property="ItemTemplate">
-            <Setter.Value>
-                <StaticResourceExtension ResourceKey="lstFeeDT"/>
-            </Setter.Value>
-        </Setter>
     </Style>
 </ResourceDictionary>
