@@ -6,6 +6,17 @@
 	Title="Login" Width="300" Height="400"
     WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="Images/calendar_green.png"
     WindowStyle="None" MouseLeftButtonDown="Window_MouseLeftButtonDown" BorderBrush="LightSteelBlue" BorderThickness="3">
+    <Window.Resources>
+        <Style TargetType="{x:Type Border}">
+            <Setter Property="Background" Value="Orange"/>
+            <Setter Property="Padding" Value="4"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter Property="Background" Value="Black"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
     <Grid x:Name="LayoutRoot" Margin="15,5">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -17,29 +28,9 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Button Name="btnClose" Click="btnClose_Click" Style="{x:Null}" Grid.Row="0" HorizontalAlignment="Right" Template="{DynamicResource WindowButtonBaseControlTemplate}" Height="16" Width="16">
-            <Button.Content>
-                <Image Stretch="Fill">
-                    <Image.Source>
-                        <DrawingImage>
-                            <DrawingImage.Drawing>
-                                <DrawingGroup>
-                                    <DrawingGroup.Children>
-                                        <GeometryDrawing Brush="#FFFF0000" Geometry="F1 M 48.025,0.499992L 178.423,131.024L 308.947,0.62603L 356.301,48.0251L 225.776,178.423L 356.175,308.947L 308.776,356.301L 178.377,225.776L 47.8533,356.175L 0.5,308.776L 131.024,178.377L 0.625961,47.8533L 48.025,0.499992 Z ">
-                                            <GeometryDrawing.Pen>
-                                                <Pen LineJoin="Round" Brush="#FF000000"/>
-                                            </GeometryDrawing.Pen>
-                                        </GeometryDrawing>
-                                    </DrawingGroup.Children>
-                                </DrawingGroup>
-                            </DrawingImage.Drawing>
-                        </DrawingImage>
-                    </Image.Source>
-                </Image>
-            </Button.Content>
-        </Button>
+        <Button Name="btnClose" Click="btnClose_Click" Style="{StaticResource WindowCloseButtonStyle}" Grid.Row="0" HorizontalAlignment="Right"/>
         <TextBlock Grid.Row="1" Text="Daily Helper" HorizontalAlignment="Center" FontSize="40" FontFamily="/DialyHelper;component/Fonts/#Tekton Pro" Foreground="Blue"></TextBlock>
-        <Border Grid.Row="2" BorderBrush="Blue" BorderThickness="2" CornerRadius="3" HorizontalAlignment="Center" Background="Gray" Padding="4">
+        <Border Grid.Row="2" BorderBrush="Blue" BorderThickness="2" CornerRadius="5" HorizontalAlignment="Center">
             <Image Name="imgportrait"  Source="Images/cccat.jpg" Height="64" Width="64" Stretch="Fill"/>
         </Border>
         <TextBlock Grid.Row="3" Text="Enter your unlock code below:" />
