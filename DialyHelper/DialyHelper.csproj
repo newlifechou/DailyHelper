@@ -93,6 +93,7 @@
     </Compile>
     <Compile Include="DBCode\AccountDB.cs" />
     <Compile Include="DBCode\DBHelper.cs" />
+    <Compile Include="DBCode\PlanDB.cs" />
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
       <SubType>Code</SubType>

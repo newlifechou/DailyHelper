@@ -34,5 +34,23 @@
                 </Button.Content>
             </Button>
         </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>           
+            <!--lstPlan-->
+            <ListBox Name="lstPlan" Grid.Row="0" Grid.Column="0" DisplayMemberPath="Title">
+                
+            </ListBox>
+            <!--lstFee-->
+            <ListBox Name="lstFee" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Width="200">
+                
+            </ListBox>
+        </Grid>
     </Grid>
 </Window>

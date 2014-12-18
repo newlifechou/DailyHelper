@@ -17,7 +17,7 @@ namespace DialyHelper.Models
         public bool IsFinished { get; set; }
         public string Remark { get; set; }
         public bool NeedRemind { get; set; }
-        public DateTime RemindTime { get; set; }
+        public Nullable<DateTime>  RemindTime { get; set; }
 
     }
 }

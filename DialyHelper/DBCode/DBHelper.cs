@@ -41,9 +41,12 @@ namespace DialyHelper
         public OleDbDataReader GetDBReader(string sqlcmd, OleDbParameter[] paras)
         {
             cmd.CommandText = sqlcmd;
-            foreach (var para in paras)
+            if (paras != null)
             {
-                cmd.Parameters.Add(para);
+                foreach (var para in paras)
+                {
+                    cmd.Parameters.Add(para);
+                }
             }
 
             OleDbDataReader dr;

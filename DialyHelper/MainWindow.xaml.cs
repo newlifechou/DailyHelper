@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DialyHelper.Models;
 
 namespace DialyHelper
 {
@@ -23,6 +24,17 @@ namespace DialyHelper
         public MainWindow()
         {
             InitializeComponent();
+            LoadData();
+        }
+
+        /// <summary>
+        /// Load Data
+        /// </summary>
+        private void LoadData()
+        {
+            PlanDB db = new PlanDB();
+            List<Plan> plans = db.GetPlans();
+            lstPlan.ItemsSource = plans;
         }
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
