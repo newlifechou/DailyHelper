@@ -50,5 +50,12 @@ namespace DailyHelper
         {
             this.Close();
         }
+
+        private void menuEditPlan_Click(object sender, RoutedEventArgs e)
+        {
+            WindowPlanEdit wpe = new WindowPlanEdit();
+            wpe.Owner = this;
+            wpe.Show();
+        }
     }
 }
