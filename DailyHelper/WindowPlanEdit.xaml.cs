@@ -26,30 +26,20 @@ namespace DailyHelper
             LoadData();
         }
 
+        private ListCollectionView planview;
         private void LoadData()
         {
-            int filter = cboFilter.SelectedIndex;
-            string sqlwhere;
-            switch (filter)
-            {
-                case 0:
-                    sqlwhere = "where isfinished=0";
-                    break;
-                case 1:
-                    sqlwhere = "where isfinished=-1";
-                    break;
-                case 2:
-                    sqlwhere = null;
-                    break;
-                default:
-                    sqlwhere = null;
-                    break;
-            }
-
             PlanDB plandb = new PlanDB();
-            List<Plan> plans = plandb.GetPlans(sqlwhere);
+            List<Plan> plans = plandb.GetPlans(null);
             lstPlan.ItemsSource = plans;
-            if (lstPlan.Items.Count>0)
+            //get the listcollectionview from the listbox item source;
+            planview = CollectionViewSource.GetDefaultView(lstPlan.ItemsSource) as ListCollectionView;
+            planview.Filter = (item) =>
+            {
+                Plan p = item as Plan;
+                return p.IsFinished == false;
+            };
+            if (lstPlan.Items.Count > 0)
             {
                 lstPlan.SelectedIndex = 0;
             }
@@ -57,7 +47,33 @@ namespace DailyHelper
 
         private void btnRefresh_Click(object sender, RoutedEventArgs e)
         {
-            LoadData();
+            int filter = cboFilter.SelectedIndex;
+            switch (filter)
+            {
+                case 0:
+                    planview.Filter = (item) =>
+                    {
+                        Plan p = item as Plan;
+                        return p.IsFinished == false;
+                    };
+                    break;
+                case 1:
+                    planview.Filter = (item) =>
+                    {
+                        Plan p = item as Plan;
+                        return p.IsFinished == true;
+                    };
+                    break;
+                case 2:
+                    planview.Filter = null;
+                    break;
+                default:
+                    break;
+            }
+            if (lstPlan.Items.Count > 0)
+            {
+                lstPlan.SelectedIndex = 0;
+            }
         }
     }
 }

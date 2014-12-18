@@ -16,7 +16,7 @@
 
         <StackPanel Grid.Row="0" Grid.Column="0">
             <TextBlock Text="Filter" TextAlignment="Center"/>
-            <ComboBox Name="cboFilter"  SelectedIndex="0">
+            <ComboBox Name="cboFilter"  SelectedIndex="0" Margin="5">
                 <ComboBoxItem>NotFinished</ComboBoxItem>
                 <ComboBoxItem>Finished</ComboBoxItem>
                 <ComboBoxItem>All</ComboBoxItem>
