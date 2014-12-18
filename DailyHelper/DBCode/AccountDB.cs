@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using System.Data.OleDb;
-using DialyHelper.Models;
+using DailyHelper.Models;
 
-namespace DialyHelper
+namespace DailyHelper
 {
     /// <summary>
     /// Account Stuff

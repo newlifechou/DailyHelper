@@ -14,4 +14,5 @@
 完成了WindowControlButton部分
 
 ResizeMode会影响到窗口的边框
+晕，一开始的项目名称都写错了，DialyHelper should  be DailyHelper
 

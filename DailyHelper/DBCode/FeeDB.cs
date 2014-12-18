@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.OleDb;
-using DialyHelper.Models;
+using DailyHelper.Models;
 
-namespace DialyHelper
+namespace DailyHelper
 {
     public class FeeDB
     {

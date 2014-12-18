@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace DialyHelper.Models
+namespace DailyHelper.Models
 {
     public class Account
     {

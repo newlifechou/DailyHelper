@@ -9,9 +9,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using DialyHelper.Models;
+using DailyHelper.Models;
 
-namespace DialyHelper
+namespace DailyHelper
 {
     /// <summary>
     /// Login.xaml 的交互逻辑
