@@ -75,5 +75,21 @@ namespace DailyHelper
                 lstPlan.SelectedIndex = 0;
             }
         }
+
+        private void btnCreate_Click(object sender, RoutedEventArgs e)
+        {
+            Plan newplan = new Plan();
+            WindowPlanDetails wpd = new WindowPlanDetails() { PlanDetails = newplan };
+            wpd.Owner = this;
+            wpd.ShowDialog();
+        }
+
+        private void btnDetails_Click(object sender, RoutedEventArgs e)
+        {
+            Plan currentplan = lstPlan.SelectedItem as Plan;
+            WindowPlanDetails wpd = new WindowPlanDetails() { PlanDetails = currentplan };
+            wpd.Owner = this;
+            wpd.ShowDialog();
+        }
     }
 }

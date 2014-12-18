@@ -92,6 +92,9 @@
     </ApplicationDefinition>
     <Compile Include="ResourceDictionary\WindowStyle.cs" />
     <Compile Include="ValueConverters\HaveInvoiceConverter.cs" />
+    <Compile Include="WindowPlanDetails.xaml.cs">
+      <DependentUpon>WindowPlanDetails.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WindowPlanEdit.xaml.cs">
       <DependentUpon>WindowPlanEdit.xaml</DependentUpon>
     </Compile>
@@ -143,6 +146,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ResourceDictionary\WindowStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowPlanDetails.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
