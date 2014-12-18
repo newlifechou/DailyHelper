@@ -5,9 +5,11 @@
     <Application.Resources>    
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="CommonSettings.xaml"/>
+                <!--Template-->
                 <ResourceDictionary Source="FlatButtonTemplate.xaml"/>
                 <ResourceDictionary Source="WindowControlButton.xaml"/>
+                <!--Style-->
+                <ResourceDictionary Source="CommonSettingStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
