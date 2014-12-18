@@ -9,6 +9,7 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <!--TitleBar-->
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>
@@ -35,11 +36,13 @@
                 </Button.Content>
             </Button>
         </Grid>
+        <!--MenuBar-->
         <Menu Name="mainmenu" Grid.Row="1" IsMainMenu="True" Style="{StaticResource mainmenustyle}">
             <MenuItem Header="Start">
                 <MenuItem Header="Exit"/>
             </MenuItem>
         </Menu>
+        <!--MainBody-->
         <Grid Grid.Row="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="2*"/>
@@ -50,13 +53,9 @@
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>           
             <!--lstPlan-->
-            <ListBox Name="lstPlan" Grid.Row="0" Grid.Column="0" DisplayMemberPath="Title" Style="{StaticResource listboxstyle}">
-                
-            </ListBox>
+            <ListBox Name="lstPlan" Grid.Row="0" Grid.Column="0" Style="{StaticResource lstPlanStyle}" />
             <!--lstFee-->
-            <ListBox Name="lstFee" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Width="200" Style="{StaticResource listboxstyle}">
-                
-            </ListBox>
+            <ListBox Name="lstFee" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Width="200" Style="{StaticResource lstFeeStyle}"/>
         </Grid>
     </Grid>
 </Window>

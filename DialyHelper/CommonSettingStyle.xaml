@@ -23,10 +23,26 @@
         </Setter>
     </Style>
     <!--ListBoxStyle-->
-    <Style x:Key="listboxstyle" TargetType="{x:Type ListBox}">
+    <Style x:Key="lstPlanStyle" TargetType="{x:Type ListBox}">
         <Setter Property="Margin" Value="2"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="ItemTemplate">
+            <Setter.Value>
+                <StaticResourceExtension ResourceKey="lstPlanDT"/>
+            </Setter.Value>
+        </Setter>
     </Style>
-    
+    <Style x:Key="lstFeeStyle" TargetType="{x:Type ListBox}">
+        <Setter Property="Margin" Value="2"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="ItemTemplate">
+            <Setter.Value>
+                <StaticResourceExtension ResourceKey="lstFeeDT"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
     <Style x:Key="mainmenustyle" TargetType="Menu">
         <Setter Property="Background" Value="White"/>
         <Setter Property="FontSize" Value="14"/>
