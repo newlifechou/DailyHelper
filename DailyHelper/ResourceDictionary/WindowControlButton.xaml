@@ -20,7 +20,7 @@
     </ControlTemplate>
 
     <!--CloseImage-->
-    <Image x:Key="CloseImage" Stretch="Fill">
+    <Image x:Key="CloseImage" x:Shared="false" Stretch="Fill" >
         <Image.Source>
             <DrawingImage>
                 <DrawingImage.Drawing>
@@ -35,7 +35,7 @@
     </Image>
 
     <!--NormalImage-->
-    <Image x:Key="NormalImage" Stretch="Fill">
+    <Image x:Key="NormalImage"  x:Shared="false" Stretch="Fill">
         <Image.Source>
             <DrawingImage>
                 <DrawingImage.Drawing>
@@ -53,7 +53,7 @@
         </Image.Source>
     </Image>
     <!--MaxmiumImage-->
-    <Image x:Key="MaxImage" Stretch="Fill">
+    <Image x:Key="MaxImage" x:Shared="false" Stretch="Fill">
         <Image.Source>
             <DrawingImage>
                 <DrawingImage.Drawing>
@@ -76,7 +76,7 @@
         </Image.Source>
     </Image>
     <!--MinimiumImage-->
-    <Image x:Key="MinImage" Stretch="Fill">
+    <Image x:Key="MinImage" x:Shared="false" Stretch="Fill">
         <Image.Source>
             <DrawingImage>
                 <DrawingImage.Drawing>

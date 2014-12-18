@@ -14,7 +14,7 @@
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
             <TextBlock Grid.Column="0" Text="PlanEdit" Style="{StaticResource textblockstyle}"/>
-            <Button Name="btnClose" Grid.Column="1" Style="{StaticResource WindowControlButtonStyle}" Click="btnClose_Click" Content="{DynamicResource MinImage}"/>
+            <Button Name="btnClose" Grid.Column="1" Style="{StaticResource WindowControlButtonStyle}" Click="btnClose_Click" Content="{StaticResource CloseImage}"/>
         </Grid>
     </Grid>
 </Window>
