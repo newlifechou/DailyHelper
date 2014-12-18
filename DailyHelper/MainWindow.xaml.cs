@@ -40,22 +40,16 @@ namespace DailyHelper
             List<Fee> fees = feedb.GetFeeList();
             lstFee.ItemsSource = fees;
         }
-
-        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            this.DragMove();
-        }
-
-        private void btnClose_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
-
         private void menuEditPlan_Click(object sender, RoutedEventArgs e)
         {
             WindowPlanEdit wpe = new WindowPlanEdit();
             wpe.Owner = this;
             wpe.Show();
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

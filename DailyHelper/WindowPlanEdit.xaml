@@ -2,19 +2,8 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="WindowPlanEdit" Height="400" Width="500" Style="{StaticResource NoneBorderWindow}"
-        MouseLeftButtonDown="Window_MouseLeftButtonDown" WindowStartupLocation="CenterOwner">
+        WindowStartupLocation="CenterOwner">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="auto"/>
-            </Grid.ColumnDefinitions>
-            <TextBlock Grid.Column="0" Text="PlanEdit" Style="{StaticResource textblockstyle}"/>
-            <Button Name="btnClose" Grid.Column="1" Style="{StaticResource WindowControlButtonStyle}" Click="btnClose_Click" Content="{StaticResource CloseImage}"/>
-        </Grid>
+
     </Grid>
 </Window>

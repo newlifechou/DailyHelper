@@ -1,13 +1,15 @@
 ﻿<Application x:Class="DailyHelper.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             StartupUri="MainWindow.xaml">
+             StartupUri="Login.xaml">
     <Application.Resources>    
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ResourceDictionary/BasicSettingStyle.xaml"/>
                 <!--ControlTemplate-->
                 <ResourceDictionary Source="ResourceDictionary/FlatButtonTemplate.xaml"/>
-                <ResourceDictionary Source="ResourceDictionary/WindowControlButton.xaml"/>               
+                <ResourceDictionary Source="ResourceDictionary/WindowControlButton.xaml"/>
+                <ResourceDictionary Source="ResourceDictionary/WindowStyle.xaml"/>
                 <!--DataTemplate-->
                 <ResourceDictionary Source="ResourceDictionary/ListItemDataTemplate.xaml"/>
                 <!--Style-->
