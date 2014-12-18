@@ -45,15 +45,62 @@
         <!--MainBody-->
         <Grid Grid.Row="2">
             <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
                 <RowDefinition Height="2*"/>
-                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="auto"/>
-            </Grid.ColumnDefinitions>           
+            </Grid.ColumnDefinitions>
             <!--lstPlan-->
-            <ListBox Name="lstPlan" Grid.Row="0" Grid.Column="0" Style="{StaticResource lstPlanStyle}" />
+            <ListBox Name="lstPlan" Grid.Row="0" Grid.Column="0" Style="{StaticResource lstPlanStyle}" SelectedIndex="0" />
+            <!--lstPlanDetails-->
+            <Border Grid.Row="1" Grid.Column="0"  Style="{StaticResource borderstyle}">
+                <ScrollViewer HorizontalScrollBarVisibility="Disabled">
+                    <Grid  DataContext="{Binding ElementName=lstPlan,Path=SelectedItem}">
+                        <Grid.Resources>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Padding" Value="4"/>
+                            </Style>
+                        </Grid.Resources>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock  Grid.Row="0" Grid.Column="0" Text="Title:"/>
+                        <TextBlock  Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding Path=Title}"/>
+
+                        <TextBlock  Grid.Row="1" Grid.Column="0" Text="StartTime:"/>
+                        <TextBlock  Grid.Row="1" Grid.Column="1" Text="{Binding Path=StartTime,StringFormat={}{0:yyyy-MM-dd}}"/>
+                        <TextBlock  Grid.Row="1" Grid.Column="2" Text="EndTime:"/>
+                        <TextBlock  Grid.Row="1" Grid.Column="3" Text="{Binding Path=EndTime,StringFormat={}{0:yyyy-MM-dd}}"/>
+
+                        <TextBlock  Grid.Row="2" Grid.Column="0" Text="Content:"/>
+                        <TextBlock  Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding Path=Content}"  TextWrapping="Wrap"/>
+
+                        <TextBlock  Grid.Row="3" Grid.Column="0" Text="IsFinished:"/>
+                        <TextBlock  Grid.Row="3" Grid.Column="1" Text="{Binding Path=IsFinished}"/>
+
+                        <TextBlock  Grid.Row="4" Grid.Column="0" Text="NeedRemind:"/>
+                        <TextBlock  Grid.Row="4" Grid.Column="1" Text="{Binding Path=NeedRemind}"/>
+                        <TextBlock  Grid.Row="4" Grid.Column="2" Text="RemindTime:"/>
+                        <TextBlock  Grid.Row="4" Grid.Column="3" Text="{Binding Path=RemindTime,StringFormat={}{0:yyyy-MM-dd}}"/>
+
+                        <TextBlock  Grid.Row="5" Grid.Column="0" Text="Remark:"/>
+                        <TextBlock  Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding Path=Remark}" TextWrapping="Wrap"/>
+                    </Grid>
+                </ScrollViewer>
+            </Border>
             <!--lstFee-->
             <ListBox Name="lstFee" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Width="200" Style="{StaticResource lstFeeStyle}"/>
         </Grid>

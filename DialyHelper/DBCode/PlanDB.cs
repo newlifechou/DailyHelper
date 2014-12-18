@@ -14,7 +14,7 @@ namespace DialyHelper
         private DBHelper db = new DBHelper();
         public List<Plan> GetPlans()
         {
-            string sqlcmd = "select id,title,content,starttime,endtime,priority,isfinished,remark,needremind,remindtime from plan";
+            string sqlcmd = "select id,title,content,starttime,endtime,priority,isfinished,remark,needremind,remindtime from plan order by priority desc";
             OleDbDataReader dr = db.GetDBReader(sqlcmd, null);
 
             List<Plan> plans = new List<Plan>();

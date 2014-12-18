@@ -25,6 +25,8 @@
     <!--ListBoxStyle-->
     <Style x:Key="lstPlanStyle" TargetType="{x:Type ListBox}">
         <Setter Property="Margin" Value="2"/>
+        <Setter Property="BorderBrush" Value="LightBlue"/>
+        <Setter Property="Margin" Value="5"/>
         <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
         <Setter Property="ItemTemplate">
             <Setter.Value>
@@ -33,7 +35,8 @@
         </Setter>
     </Style>
     <Style x:Key="lstFeeStyle" TargetType="{x:Type ListBox}">
-        <Setter Property="Margin" Value="2"/>
+        <Setter Property="BorderBrush" Value="LightBlue"/>
+        <Setter Property="Margin" Value="5"/>
         <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
         <Setter Property="ItemTemplate">
             <Setter.Value>
@@ -42,9 +45,17 @@
         </Setter>
     </Style>
 
-
+    <!--MenuStyle-->
     <Style x:Key="mainmenustyle" TargetType="Menu">
         <Setter Property="Background" Value="White"/>
         <Setter Property="FontSize" Value="14"/>
+    </Style>
+    <!--BorderStyle-->
+    <Style x:Key="borderstyle" TargetType="{x:Type Border}">
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="LightBlue"/>
+        <Setter Property="CornerRadius" Value="5"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Padding" Value="5"/>
     </Style>
 </ResourceDictionary>
