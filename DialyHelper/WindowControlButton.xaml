@@ -84,7 +84,7 @@
                         <DrawingGroup.Children>
                             <GeometryDrawing Geometry="F1 M 0.5,0.50004L 14.7918,0.50004L 14.7918,12.2917L 0.5,12.2917L 0.5,0.50004 Z ">
                                 <GeometryDrawing.Pen>
-                                    <Pen LineJoin="Round" Brush="#FF000000"/>
+                                    <Pen LineJoin="Round" Brush="#FFFFFFFF"/>
                                 </GeometryDrawing.Pen>
                             </GeometryDrawing>
                             <GeometryDrawing Brush="#FF000000" Geometry="F1 M 0.5,9.58335L 14.7918,9.58335L 14.7918,12.2918L 0.5,12.2918L 0.5,9.58335 Z ">
@@ -99,11 +99,12 @@
         </Image.Source>
     </Image>
 
-    <!--CloseButtonStyle-->
-    <Style x:Key="WindowCloseButtonStyle" TargetType="{x:Type Button}">
+    <!--ControlButtonStyle-->
+    <Style x:Key="WindowControlButtonStyle" TargetType="{x:Type Button}">
         <Style.Setters>
             <Setter Property="Height" Value="16"/>
             <Setter Property="Width" Value="16"/>
+            <Setter Property="Margin" Value="3"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <StaticResource ResourceKey="WindowButtonBaseControlTemplate"/>

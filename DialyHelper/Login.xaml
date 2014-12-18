@@ -28,7 +28,7 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Button Name="btnClose" Click="btnClose_Click" Style="{StaticResource WindowCloseButtonStyle}" Grid.Row="0" HorizontalAlignment="Right">
+        <Button Name="btnClose" Click="btnClose_Click" Style="{StaticResource WindowControlButtonStyle}" Grid.Row="0" HorizontalAlignment="Right">
             <Button.Content>
                 <StaticResource ResourceKey="CloseImage"/>
             </Button.Content>
