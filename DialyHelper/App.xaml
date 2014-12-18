@@ -6,13 +6,12 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <!--ControlTemplate-->
-                <ResourceDictionary Source="FlatButtonTemplate.xaml"/>
-                <ResourceDictionary Source="WindowControlButton.xaml"/>               
+                <ResourceDictionary Source="ResourceDictionary/FlatButtonTemplate.xaml"/>
+                <ResourceDictionary Source="ResourceDictionary/WindowControlButton.xaml"/>               
                 <!--DataTemplate-->
-                <ResourceDictionary Source="ListItemDataTemplate.xaml"/>
-                
+                <ResourceDictionary Source="ResourceDictionary/ListItemDataTemplate.xaml"/>
                 <!--Style-->
-                <ResourceDictionary Source="CommonSettingStyle.xaml"/>
+                <ResourceDictionary Source="ResourceDictionary/CommonSettingStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
