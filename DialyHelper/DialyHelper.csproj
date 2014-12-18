@@ -151,6 +151,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Resource Include="Images\cccat.jpg" />
     <Resource Include="Images\mainapp.ico" />
     <Resource Include="Images\calendar_green.png" />
     <Content Include="Data\DialyHelper.accdb">
