@@ -65,7 +65,8 @@
     <ApplicationIcon>Images\mainapp.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>DailyHelper.App</StartupObject>
+    <StartupObject>
+    </StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="PresentationFramework.Aero" />
