@@ -47,7 +47,7 @@
 
     <!--MenuStyle-->
     <Style x:Key="mainmenustyle" TargetType="Menu">
-        <Setter Property="Background" Value="White"/>
+        <Setter Property="Background" Value="LightBlue"/>
         <Setter Property="FontSize" Value="14"/>
     </Style>
     <!--BorderStyle-->

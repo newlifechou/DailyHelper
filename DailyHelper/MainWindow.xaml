@@ -56,10 +56,14 @@
                 <MenuItem Header="Edit"/>
                 <MenuItem Header="Delete"/>
             </MenuItem>
+            <MenuItem Header="Help">
+                <MenuItem Header="About"/>
+            </MenuItem>
         </Menu>
         <!--MainBody-->
         <Grid Grid.Row="2">
             <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
                 <RowDefinition Height="3*"/>
                 <RowDefinition Height="2*"/>
             </Grid.RowDefinitions>
@@ -67,10 +71,12 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Plans" TextAlignment="Center" Background="Orange" FontSize="16" Padding="5,3"/>
+            <TextBlock Grid.Row="0" Grid.Column="1" Text="Fees"  TextAlignment="Center" Background="LightSalmon" FontSize="16"  Padding="5,3"/>
             <!--lstPlan-->
-            <ListBox Name="lstPlan" Grid.Row="0" Grid.Column="0" Style="{StaticResource lstPlanStyle}" SelectedIndex="0" />
+            <ListBox Name="lstPlan" Grid.Row="1" Grid.Column="0" Style="{StaticResource lstPlanStyle}" SelectedIndex="0" />
             <!--lstPlanDetails-->
-            <Border Grid.Row="1" Grid.Column="0"  Style="{StaticResource borderstyle}">
+            <Border Grid.Row="2" Grid.Column="0"  Style="{StaticResource borderstyle}">
                 <ScrollViewer HorizontalScrollBarVisibility="Disabled">
                     <Grid  DataContext="{Binding ElementName=lstPlan,Path=SelectedItem}">
                         <Grid.Resources>
@@ -117,7 +123,7 @@
                 </ScrollViewer>
             </Border>
             <!--lstFee-->
-            <ListBox Name="lstFee" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Width="200" Style="{StaticResource lstFeeStyle}"/>
+            <ListBox Name="lstFee" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Width="200" Style="{StaticResource lstFeeStyle}"/>
         </Grid>
     </Grid>
 </Window>
