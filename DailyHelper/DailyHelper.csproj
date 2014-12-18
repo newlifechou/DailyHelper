@@ -95,7 +95,7 @@
     <Compile Include="WindowPlanEdit.xaml.cs">
       <DependentUpon>WindowPlanEdit.xaml</DependentUpon>
     </Compile>
-    <Page Include="FlatPasswordBoxStyle.xaml">
+    <Page Include="ResourceDictionary\FlatPasswordBoxStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

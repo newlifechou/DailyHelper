@@ -86,7 +86,7 @@
                 </ScrollViewer>
             </Border>
             <!--lstFee-->
-            <ListBox Name="lstFee" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Width="200" Style="{StaticResource lstStyle}" ItemTemplate="{StaticResource lstFeeDT}"/>
+            <ListBox Name="lstFee" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Width="200" Style="{StaticResource lstStyle}" ItemTemplate="{StaticResource lstFeeDT}" SelectedIndex="0"/>
         </Grid>
     </Grid>
 </Window>

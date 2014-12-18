@@ -12,9 +12,14 @@ namespace DailyHelper
     public class PlanDB
     {
         private DBHelper db = new DBHelper();
-        public List<Plan> GetPlans()
+        public List<Plan> GetPlans(string sqlwhere)
         {
-            string sqlcmd = "select id,title,content,starttime,endtime,priority,isfinished,remark,needremind,remindtime from plan order by priority desc";
+            string sqlcmd = "select id,title,content,starttime,endtime,priority,isfinished,remark,needremind,remindtime from plan";
+            if (sqlwhere!=null)
+            {
+                sqlcmd += " " + sqlwhere;
+            }
+            sqlcmd += "  order by priority desc";
             OleDbDataReader dr = db.GetDBReader(sqlcmd, null);
 
             List<Plan> plans = new List<Plan>();

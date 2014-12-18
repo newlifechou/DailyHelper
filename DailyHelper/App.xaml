@@ -1,7 +1,7 @@
 ﻿<Application x:Class="DailyHelper.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             StartupUri="Login.xaml">
+             StartupUri="MainWindow.xaml">
     <Application.Resources>    
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -9,12 +9,13 @@
                 <!--ControlTemplate-->
                 <ResourceDictionary Source="ResourceDictionary/FlatButtonTemplate.xaml"/>
                 <ResourceDictionary Source="ResourceDictionary/WindowControlButton.xaml"/>
+                <ResourceDictionary Source="ResourceDictionary/FlatPasswordBoxStyle.xaml"/>
                 <ResourceDictionary Source="ResourceDictionary/WindowStyle.xaml"/>
                 <!--DataTemplate-->
                 <ResourceDictionary Source="ResourceDictionary/ListItemDataTemplate.xaml"/>
+                
                 <!--Style-->
                 <ResourceDictionary Source="ResourceDictionary/CommonSettingStyle.xaml"/>
-                <ResourceDictionary Source="FlatPasswordBoxStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

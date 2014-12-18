@@ -30,7 +30,29 @@
             </Grid>
         </Border>
     </DataTemplate>
-
+    
+    <DataTemplate x:Key="lstPlanDTEdit">
+        <Border BorderBrush="LightBlue" BorderThickness="1" CornerRadius="4" Padding="4" Margin="5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Title"/>
+                <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Path=Title}" TextWrapping="Wrap"/>
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="StartTime"/>
+                <TextBlock   Grid.Row="1" Grid.Column="1" Text="{Binding Path=StartTime,StringFormat={}{0:yyyy-MM-dd}}" />
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="EndTime"/>
+                <TextBlock   Grid.Row="2" Grid.Column="1" Text="{Binding Path=EndTime,StringFormat={}{0:yyyy-MM-dd}}" />
+            </Grid>
+        </Border>
+    </DataTemplate>
+    
     <DataTemplate x:Key="lstFeeDT">
         <Border BorderBrush="LightBlue" BorderThickness="1" CornerRadius="4" Padding="4" Margin="5">
             <StackPanel>

@@ -33,7 +33,7 @@ namespace DailyHelper
         private void LoadData()
         {
             PlanDB plandb = new PlanDB();
-            List<Plan> plans = plandb.GetPlans();
+            List<Plan> plans = plandb.GetPlans(null);
             lstPlan.ItemsSource = plans;
 
             FeeDB feedb=new FeeDB();
