@@ -16,6 +16,9 @@
                 
                 <!--Style-->
                 <ResourceDictionary Source="ResourceDictionary/CommonSettingStyle.xaml"/>
+                
+                <!--ValdiationRule-->
+                <ResourceDictionary Source="ResourceDictionary/ValidationRules.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

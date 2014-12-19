@@ -48,6 +48,8 @@ namespace DailyHelper
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
+            //遍历grid，查找validationerror
+
             Plan p = gridplandetails.DataContext as Plan;
             PlanDB db = new PlanDB();
             int result = db.SavePlan(p, this.OpType);
