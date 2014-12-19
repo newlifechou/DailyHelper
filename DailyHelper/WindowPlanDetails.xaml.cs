@@ -38,19 +38,12 @@ namespace DailyHelper
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
             Plan p = gridplandetails.DataContext as Plan;
-            //TODO:will add validation code here later  
-            if (OpType==CrudOP.Create)
+            PlanDB db = new PlanDB();
+            int result = db.SavePlan(p, this.OpType);
+            if (result>0)
             {
-                
+                MessageBox.Show("Successful");
             }
-            else
-            {
-
-            }
-
-
-
-
         }
 
     }

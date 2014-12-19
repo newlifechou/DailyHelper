@@ -83,6 +83,7 @@ namespace DailyHelper
             WindowPlanDetails wpd = new WindowPlanDetails();
             wpd.LoadData(newplan);
             wpd.OpType = CrudOP.Create;
+            wpd.Owner = this;
             wpd.ShowDialog();
         }
 
@@ -92,6 +93,7 @@ namespace DailyHelper
             WindowPlanDetails wpd = new WindowPlanDetails();
             wpd.LoadData(currentplan);
             wpd.OpType = CrudOP.Update;
+            wpd.Owner = this;
             wpd.ShowDialog();
         }
     }

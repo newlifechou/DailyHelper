@@ -71,11 +71,13 @@ namespace DailyHelper
         public object GetDBSchalar(string sqlcmd, OleDbParameter[] paras)
         {
             cmd.CommandText = sqlcmd;
-            foreach (var para in paras)
+            if (paras != null)
             {
-                cmd.Parameters.Add(para);
+                foreach (var para in paras)
+                {
+                    cmd.Parameters.Add(para);
+                }
             }
-
             object value;
             try
             {
@@ -91,6 +93,39 @@ namespace DailyHelper
                 con.Close();
             }
             return value;
+        }
+
+        /// <summary>
+        /// ExecuteSql
+        /// </summary>
+        /// <param name="sqlcmd"></param>
+        /// <param name="paras"></param>
+        /// <returns>result</returns>
+        public int ExecuteSql(string sqlcmd, OleDbParameter[] paras)
+        {
+            cmd.CommandText = sqlcmd;
+            if (paras != null)
+            {
+                foreach (var para in paras)
+                {
+                    cmd.Parameters.Add(para);
+                }
+            }
+            int result;
+            try
+            {
+                con.Open();
+                result = cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return result;
         }
     }
 }
