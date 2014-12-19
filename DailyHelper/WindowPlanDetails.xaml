@@ -48,7 +48,7 @@
                 <TextBlock  Grid.Row="0" Grid.Column="0" Text="Title:"/>
                 <TextBox  Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3">
                     <TextBox.Text>
-                        <Binding Path="Title">
+                        <Binding Path="Title" NotifyOnValidationError="True">
                             <Binding.ValidationRules>
                                 <StaticResource ResourceKey="NotNullRule"/>
                             </Binding.ValidationRules>
@@ -69,7 +69,7 @@
                 <TextBlock  Grid.Row="3" Grid.Column="2" Text="Priority:"/>
                 <TextBox  Grid.Row="3" Grid.Column="3">
                     <TextBox.Text>
-                        <Binding Path="Priority">
+                        <Binding Path="Priority"  NotifyOnValidationError="True">
                             <Binding.ValidationRules>
                                <StaticResource ResourceKey="NotNullRule"/>
                             </Binding.ValidationRules>

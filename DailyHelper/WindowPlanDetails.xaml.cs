@@ -30,9 +30,9 @@ namespace DailyHelper
         /// updatedate event
         /// </summary>
         public event EventHandler UpdateData;
-        public void OnUpdateData(object sender,EventArgs e)
+        public void OnUpdateData(object sender, EventArgs e)
         {
-            if (UpdateData!=null)
+            if (UpdateData != null)
             {
                 UpdateData(this, e);
             }
@@ -49,11 +49,34 @@ namespace DailyHelper
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
             //遍历grid，查找validationerror
+            foreach (var item in LogicalTreeHelper.GetChildren(gridplandetails))
+            {
+                if (item is TextBox || item is DatePicker)
+                {
+                    DependencyObject obj = item as DependencyObject;
+                    bool isvalid = Validation.GetHasError(obj);
+                    if (isvalid == true)
+                    {
+                        MessageBox.Show("Validation Failed" + obj.ToString());
+                        return;
+                    }
+                }
+            }
+
 
             Plan p = gridplandetails.DataContext as Plan;
             PlanDB db = new PlanDB();
-            int result = db.SavePlan(p, this.OpType);
-            if (result>0)
+            int result=0;
+            try
+            {
+                result = db.SavePlan(p, this.OpType);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            if (result > 0)
             {
                 MessageBox.Show("Successful");
                 OnUpdateData(this, null);
