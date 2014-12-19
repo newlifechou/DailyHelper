@@ -103,18 +103,21 @@ namespace DailyHelper
             wpd.UpdateData += updateData;
             wpd.ShowDialog();
         }
-        private void updateData(object sender,EventArgs e)
+        private void updateData(object sender, EventArgs e)
         {
             LoadData();
         }
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-            Plan p = lstPlan.SelectedItem as Plan;
-            int result = plandb.DeletePlan(p);
-            if (result>0)
+            if (MessageBox.Show("Are you sure to delete this?","Delete?",MessageBoxButton.YesNo)==MessageBoxResult.Yes)
             {
-                MessageBox.Show("Success");
-                updateData(this, null);
+                Plan p = lstPlan.SelectedItem as Plan;
+                int result = plandb.DeletePlan(p);
+                if (result > 0)
+                {
+                    MessageBox.Show("Success");
+                    updateData(this, null);
+                }
             }
         }
     }
