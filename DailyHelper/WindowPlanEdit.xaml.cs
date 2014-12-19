@@ -29,29 +29,21 @@ namespace DailyHelper
 
         private ListCollectionView planview;
         private PlanDB plandb = new PlanDB();
+
         private void LoadData()
         {
             List<Plan> plans = plandb.GetPlans(null);
             lstPlan.ItemsSource = plans;
             //get the listcollectionview from the listbox item source;
             planview = CollectionViewSource.GetDefaultView(lstPlan.ItemsSource) as ListCollectionView;
-            planview.Filter = (item) =>
-            {
-                Plan p = item as Plan;
-                return p.IsFinished == false;
-            };
+            //调用刷新
+            RefreshData();
             if (lstPlan.Items.Count > 0)
             {
                 lstPlan.SelectedIndex = 0;
             }
         }
-
-        /// <summary>
-        /// Refresh will not reload the datafrom the database
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnRefresh_Click(object sender, RoutedEventArgs e)
+        public void RefreshData()
         {
             int filter = cboFilter.SelectedIndex;
             switch (filter)
@@ -81,6 +73,15 @@ namespace DailyHelper
                 lstPlan.SelectedIndex = 0;
             }
         }
+        /// <summary>
+        /// Refresh will not reload the datafrom the database
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnRefresh_Click(object sender, RoutedEventArgs e)
+        {
+            RefreshData();
+        }
 
         private void btnCreate_Click(object sender, RoutedEventArgs e)
         {
@@ -109,7 +110,7 @@ namespace DailyHelper
         }
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-            if (MessageBox.Show("Are you sure to delete this?","Delete?",MessageBoxButton.YesNo)==MessageBoxResult.Yes)
+            if (MessageBox.Show("Are you sure to delete this?", "Delete?", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
                 Plan p = lstPlan.SelectedItem as Plan;
                 int result = plandb.DeletePlan(p);
