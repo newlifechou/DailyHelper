@@ -22,11 +22,20 @@ namespace DailyHelper
         /// <summary>
         /// Plan Interface
         /// </summary>
-        public Plan PlanDetails { get; set; }
+
         public WindowPlanDetails()
         {
             InitializeComponent();
             //this.gridplandetails.DataContext = PlanDetails;
         }
+        /// <summary>
+        /// Public LoadData
+        /// </summary>
+        /// <param name="plandetails"></param>
+        public void LoadData(Plan plandetails)
+        {
+            this.gridplandetails.DataContext = plandetails;
+        }
+
     }
 }

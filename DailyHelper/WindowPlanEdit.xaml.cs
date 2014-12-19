@@ -79,7 +79,8 @@ namespace DailyHelper
         private void btnCreate_Click(object sender, RoutedEventArgs e)
         {
             Plan newplan = new Plan();
-            WindowPlanDetails wpd = new WindowPlanDetails() { PlanDetails = newplan };
+            WindowPlanDetails wpd = new WindowPlanDetails();
+            wpd.LoadData(newplan);
             wpd.Owner = this;
             wpd.ShowDialog();
         }
@@ -87,8 +88,9 @@ namespace DailyHelper
         private void btnDetails_Click(object sender, RoutedEventArgs e)
         {
             Plan currentplan = lstPlan.SelectedItem as Plan;
-            WindowPlanDetails wpd = new WindowPlanDetails() { PlanDetails = currentplan };
+            WindowPlanDetails wpd = new WindowPlanDetails();
             wpd.Owner = this;
+            wpd.LoadData(currentplan);
             wpd.ShowDialog();
         }
     }
