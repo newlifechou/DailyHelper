@@ -43,6 +43,7 @@ namespace DailyHelper
             if (result>0)
             {
                 MessageBox.Show("Successful");
+                this.Close();
             }
         }
 

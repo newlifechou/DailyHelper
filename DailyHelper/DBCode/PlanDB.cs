@@ -64,17 +64,17 @@ namespace DailyHelper
             if (OpType == CrudOP.Create)
             {
                 sqlcmd = "insert into plan(title,content,starttime,endtime,priority,isfinished,remark,needremind,remindtime)" +
-                "values(@title,@content,@starttime,@endtime,@priority,@isfinished,@remark,@needremind,@remindtime)";
+                "values(?,?,?,?,?,?,?,?,?)";
                 OleDbParameter[] paras = new OleDbParameter[] { 
-                new OleDbParameter("@title",plan.Title),
-                new OleDbParameter("@content",plan.Content),
-                new OleDbParameter("@starttime",plan.StartTime),
-                new OleDbParameter("@endtime",plan.EndTime),
-                new OleDbParameter("@priority",plan.Priority),
-                new OleDbParameter("@isfinished",plan.IsFinished),
-                new OleDbParameter("@remark",plan.Remark),
-                new OleDbParameter("@needremind",plan.NeedRemind),
-                new OleDbParameter("@remindtime",plan.NeedRemind)
+                new OleDbParameter("?",plan.Title),
+                new OleDbParameter("?",plan.Content),
+                new OleDbParameter("?",plan.StartTime),
+                new OleDbParameter("?",plan.EndTime),
+                new OleDbParameter("?",plan.Priority),
+                new OleDbParameter("?",plan.IsFinished),
+                new OleDbParameter("?",plan.Remark),
+                new OleDbParameter("?",plan.NeedRemind),
+                new OleDbParameter("?",plan.NeedRemind)
                 };
                 result = db.ExecuteSql(sqlcmd, paras);
             }

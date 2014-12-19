@@ -17,3 +17,5 @@ ACCESS 数据库是32位的，对应编译目标也必须是32位否则会出错
 ResizeMode会影响到窗口的边框
 晕，一开始的项目名称都写错了，DialyHelper should  be DailyHelper
 
+ATTENION因为Access是文件数据库，所以暂时先用绝对引用使用项目文件夹当中的数据库文件，最终结束的时候再换成相对路径
+
