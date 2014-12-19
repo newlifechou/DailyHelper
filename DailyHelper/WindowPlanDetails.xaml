@@ -10,7 +10,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Orientation="Horizontal">
-            <Button Name="btnSave" Content="Save" Style="{StaticResource buttonstyle2}"/>
+            <Button Name="btnSave" Content="Save" Style="{StaticResource buttonstyle2}" Click="btnSave_Click"/>
         </StackPanel>
         <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Disabled">
             <Grid Name="gridplandetails">

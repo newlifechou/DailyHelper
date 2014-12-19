@@ -91,6 +91,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Common\CRUDEnum.cs" />
     <Compile Include="ResourceDictionary\WindowStyle.cs" />
     <Compile Include="ValueConverters\HaveInvoiceConverter.cs" />
     <Compile Include="WindowPlanDetails.xaml.cs">

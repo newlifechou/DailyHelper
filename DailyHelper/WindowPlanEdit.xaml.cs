@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using DailyHelper.Models;
+using DailyHelper.Common;
 
 namespace DailyHelper
 {
@@ -81,16 +82,16 @@ namespace DailyHelper
             Plan newplan = new Plan();
             WindowPlanDetails wpd = new WindowPlanDetails();
             wpd.LoadData(newplan);
-            wpd.Owner = this;
+            wpd.OpType = CrudOP.Create;
             wpd.ShowDialog();
         }
 
-        private void btnDetails_Click(object sender, RoutedEventArgs e)
+        private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
             Plan currentplan = lstPlan.SelectedItem as Plan;
             WindowPlanDetails wpd = new WindowPlanDetails();
-            wpd.Owner = this;
             wpd.LoadData(currentplan);
+            wpd.OpType = CrudOP.Update;
             wpd.ShowDialog();
         }
     }

@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using DailyHelper.Models;
+using DailyHelper.Common;
 
 namespace DailyHelper
 {
@@ -19,15 +20,12 @@ namespace DailyHelper
     /// </summary>
     public partial class WindowPlanDetails : Window
     {
-        /// <summary>
-        /// Plan Interface
-        /// </summary>
 
         public WindowPlanDetails()
         {
             InitializeComponent();
-            //this.gridplandetails.DataContext = PlanDetails;
         }
+        public CrudOP OpType { get; set; }
         /// <summary>
         /// Public LoadData
         /// </summary>
@@ -35,6 +33,24 @@ namespace DailyHelper
         public void LoadData(Plan plandetails)
         {
             this.gridplandetails.DataContext = plandetails;
+        }
+
+        private void btnSave_Click(object sender, RoutedEventArgs e)
+        {
+            Plan p = gridplandetails.DataContext as Plan;
+            //TODO:will add validation code here later  
+            if (OpType==CrudOP.Create)
+            {
+                
+            }
+            else
+            {
+
+            }
+
+
+
+
         }
 
     }
