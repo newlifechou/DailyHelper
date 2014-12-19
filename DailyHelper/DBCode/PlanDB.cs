@@ -98,5 +98,12 @@ namespace DailyHelper
             }
             return result;
         }
+
+        public int DeletePlan(Plan plan)
+        {
+            string sqlcmd = "delete * from plan where id="+plan.ID;
+            int result = db.ExecuteSql(sqlcmd, null);
+            return result;
+        }
     }
 }

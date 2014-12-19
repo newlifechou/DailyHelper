@@ -27,6 +27,17 @@ namespace DailyHelper
         }
         public CrudOP OpType { get; set; }
         /// <summary>
+        /// updatedate event
+        /// </summary>
+        public event EventHandler UpdateData;
+        public void OnUpdateData(object sender,EventArgs e)
+        {
+            if (UpdateData!=null)
+            {
+                UpdateData(this, e);
+            }
+        }
+        /// <summary>
         /// Public LoadData
         /// </summary>
         /// <param name="plandetails"></param>
@@ -43,6 +54,7 @@ namespace DailyHelper
             if (result>0)
             {
                 MessageBox.Show("Successful");
+                OnUpdateData(this, null);
                 this.Close();
             }
         }

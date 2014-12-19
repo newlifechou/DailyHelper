@@ -21,7 +21,7 @@
             <Button Name="btnRefresh"  Content="Refresh" Style="{StaticResource buttonstyle}" Click="btnRefresh_Click" />
             <Button Name="btnCreate" Content="Create" Style="{StaticResource buttonstyle2}" Click="btnCreate_Click"/>
             <Button Name="btnEdit" Content="Edit" Style="{StaticResource buttonstyle2}" Click="btnEdit_Click"/>
-            <Button Name="btnDelete" Content="Delete" Style="{StaticResource buttonstyle2}"/>
+            <Button Name="btnDelete" Content="Delete" Style="{StaticResource buttonstyle2}" Click="btnDelete_Click"/>
         </StackPanel>
         <ListBox Name="lstPlan" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Style="{DynamicResource lstStyle}"
                  ItemTemplate="{StaticResource lstPlanDTEdit}"/>

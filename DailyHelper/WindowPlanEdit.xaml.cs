@@ -28,9 +28,9 @@ namespace DailyHelper
         }
 
         private ListCollectionView planview;
+        private PlanDB plandb = new PlanDB();
         private void LoadData()
         {
-            PlanDB plandb = new PlanDB();
             List<Plan> plans = plandb.GetPlans(null);
             lstPlan.ItemsSource = plans;
             //get the listcollectionview from the listbox item source;
@@ -89,6 +89,7 @@ namespace DailyHelper
             wpd.LoadData(newplan);
             wpd.OpType = CrudOP.Create;
             wpd.Owner = this;
+            wpd.UpdateData += updateData;
             wpd.ShowDialog();
         }
 
@@ -99,7 +100,22 @@ namespace DailyHelper
             wpd.LoadData(currentplan);
             wpd.OpType = CrudOP.Update;
             wpd.Owner = this;
+            wpd.UpdateData += updateData;
             wpd.ShowDialog();
+        }
+        private void updateData(object sender,EventArgs e)
+        {
+            LoadData();
+        }
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            Plan p = lstPlan.SelectedItem as Plan;
+            int result = plandb.DeletePlan(p);
+            if (result>0)
+            {
+                MessageBox.Show("Success");
+                updateData(this, null);
+            }
         }
     }
 }
