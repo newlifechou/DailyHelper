@@ -46,6 +46,11 @@ namespace DailyHelper
             }
         }
 
+        /// <summary>
+        /// Refresh will not reload the datafrom the database
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnRefresh_Click(object sender, RoutedEventArgs e)
         {
             int filter = cboFilter.SelectedIndex;
