@@ -1,0 +1,25 @@
+﻿<Window x:Class="DailyHelper.WindowFeeEdit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WindowFeeEdit" Height="300" Width="408.271" WindowStartupLocation="CenterOwner" Style="{StaticResource NoneBorderWindow}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <ComboBox Name="cboFilter" SelectedIndex="0" VerticalAlignment="Center">
+                <ComboBoxItem>未报销</ComboBoxItem>
+                <ComboBoxItem>已报销</ComboBoxItem>
+                <ComboBoxItem>全部</ComboBoxItem>
+            </ComboBox>
+            <Button Name="btnRefresh" Content="Refresh" Style="{StaticResource buttonstyle2}"/>
+            <Button Name="btnCreate" Content="Create" Style="{StaticResource buttonstyle2}"/>
+            <Button Name="btnEdit" Content="Edit" Style="{StaticResource buttonstyle2}"/>
+            <Button Name="btnDelete" Content="Delete" Style="{StaticResource buttonstyle2}"/>
+        </StackPanel>
+        <ListBox Name="lstFee" Grid.Row="1">
+            
+        </ListBox>
+    </Grid>
+</Window>

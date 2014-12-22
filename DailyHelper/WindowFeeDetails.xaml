@@ -1,0 +1,49 @@
+﻿<Window x:Class="DailyHelper.WindowFeeDetails"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WindowFeeDetails" Height="300" Width="300" WindowStartupLocation="CenterOwner" Style="{StaticResource NoneBorderWindow}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <Button Name="btnSave" Content="Save" Style="{StaticResource buttonstyle2}"/>
+        </StackPanel>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.Resources>
+              
+            </Grid.Resources>
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="ItemTime"/>
+            <DatePicker Grid.Row="0" Grid.Column="1" Text="{Binding Path=ItemTime,Mode=TwoWay}"/>
+
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="ItemContent"/>
+            <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Path=ItemContent}"/>
+            
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Cost"/>
+            <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Path=Cost}"/>
+            
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="HaveInvoice"/>
+            <CheckBox Grid.Row="3" Grid.Column="1" IsChecked="{Binding Path=HaveInvoice}"/>
+
+            <TextBlock Grid.Row="4" Grid.Column="0" Text="IsReimburse"/>
+            <CheckBox Grid.Row="4" Grid.Column="1" IsChecked="{Binding Path=IsReimburse}"/>
+
+            <TextBlock Grid.Row="5" Grid.Column="0" Text="ReimburseTime"/>
+            <DatePicker Grid.Row="5" Grid.Column="1" Text="{Binding Path=ReimburseTime,Mode=TwoWay}"/>
+        </Grid>
+    </Grid>
+</Window>
