@@ -49,18 +49,11 @@ namespace DailyHelper
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
             //遍历grid，查找validationerror
-            foreach (var item in LogicalTreeHelper.GetChildren(gridplandetails))
+            WindowValid wv = new WindowValid();
+            if (!wv.IsValid(this))
             {
-                if (item is TextBox || item is DatePicker)
-                {
-                    DependencyObject obj = item as DependencyObject;
-                    bool isvalid = Validation.GetHasError(obj);
-                    if (isvalid == true)
-                    {
-                        MessageBox.Show("Validation Failed" + obj.ToString());
-                        return;
-                    }
-                }
+                MessageBox.Show("The validation is not pass");
+                return;
             }
 
 
