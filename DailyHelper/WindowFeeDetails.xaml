@@ -25,7 +25,21 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid.Resources>
-              
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Margin" Value="4"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                </Style>
+                <Style TargetType="{x:Type TextBox}">
+                    <Setter Property="Margin" Value="4"/>
+                </Style>
+                <Style TargetType="{x:Type DatePicker}">
+                    <Setter Property="Margin" Value="4"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                </Style>
+                <Style TargetType="{x:Type CheckBox}">
+                    <Setter Property="Margin" Value="4"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                </Style>
             </Grid.Resources>
             <TextBlock Grid.Row="0" Grid.Column="0" Text="ItemTime"/>
             <DatePicker Grid.Row="0" Grid.Column="1" Text="{Binding Path=ItemTime,Mode=TwoWay}"/>
