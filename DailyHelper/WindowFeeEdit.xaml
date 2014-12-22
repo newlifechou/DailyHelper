@@ -1,7 +1,8 @@
 ﻿<Window x:Class="DailyHelper.WindowFeeEdit"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="WindowFeeEdit" Height="400" Width="400" WindowStartupLocation="CenterOwner" Style="{StaticResource NoneBorderWindow}">
+        Title="WindowFeeEdit" Height="400" Width="400" WindowStartupLocation="CenterOwner"
+        Style="{StaticResource NoneBorderWindow}" Closing="Window_Closing">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>

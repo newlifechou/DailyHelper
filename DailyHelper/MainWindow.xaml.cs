@@ -51,7 +51,13 @@ namespace DailyHelper
         {
             WindowPlanEdit wpe = new WindowPlanEdit();
             wpe.Owner = this;
+            wpe.UpdateData+=wpe_UpdateData;
             wpe.Show();
+        }
+
+        private void wpe_UpdateData(object sender, EventArgs e)
+        {
+            LoadData();
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
@@ -68,6 +74,7 @@ namespace DailyHelper
         {
             WindowFeeEdit wfe = new WindowFeeEdit();
             wfe.Owner = this;
+            wfe.UpdateData += wpe_UpdateData;
             wfe.Show();
         }
     }

@@ -124,5 +124,17 @@ namespace DailyHelper
                 }
             }
         }
+        public event EventHandler UpdateData;
+        public void OnUpdateData()
+        {
+            if (UpdateData != null)
+            {
+                UpdateData(this, null);
+            }
+        }
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            OnUpdateData();
+        }
     }
 }
