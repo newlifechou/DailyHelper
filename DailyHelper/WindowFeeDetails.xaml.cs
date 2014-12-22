@@ -15,6 +15,7 @@ using DailyHelper.Common;
 
 namespace DailyHelper
 {
+
     /// <summary>
     /// Interaction logic for WindowFeeDetails.xaml
     /// </summary>
@@ -29,7 +30,14 @@ namespace DailyHelper
         {
             gridFee.DataContext = fee;
         }
-
+        public event EventHandler UpdateData;
+        public void OnUpdateData()
+        {
+            if (UpdateData!=null)
+            {
+                UpdateData(this, null);
+            }
+        }
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
             bool isvalid = (new WindowValid()).IsValid(this);
@@ -46,6 +54,9 @@ namespace DailyHelper
                 if (result > 0)
                 {
                     MessageBox.Show("Success!");
+                    //invoke the event
+                    OnUpdateData();
+                    this.Close();
                 }
                 else
                 {

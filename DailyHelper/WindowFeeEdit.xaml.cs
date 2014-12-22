@@ -48,6 +48,7 @@ namespace DailyHelper
             wfd.LoadData(fee);
             wfd.opType = CrudOP.Create;
             wfd.Owner = this;
+            wfd.UpdateData += wfd_UpdateData;
             wfd.ShowDialog();
         }
 
@@ -58,7 +59,13 @@ namespace DailyHelper
             wfd.LoadData(fee);
             wfd.opType = CrudOP.Update;
             wfd.Owner = this;
+            wfd.UpdateData+=wfd_UpdateData;
             wfd.ShowDialog();
+        }
+
+        private void wfd_UpdateData(object sender, EventArgs e)
+        {
+            LoadData();
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
