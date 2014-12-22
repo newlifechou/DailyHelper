@@ -8,9 +8,9 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Orientation="Horizontal">
-            <Button Name="btnSave" Content="Save" Style="{StaticResource buttonstyle2}"/>
+            <Button Name="btnSave" Content="Save" Style="{StaticResource buttonstyle2}" Click="btnSave_Click"/>
         </StackPanel>
-        <Grid Grid.Row="1">
+        <Grid Name="gridFee" Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="*"/>

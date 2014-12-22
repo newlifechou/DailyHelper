@@ -13,10 +13,10 @@
                 <ComboBoxItem>已报销</ComboBoxItem>
                 <ComboBoxItem>全部</ComboBoxItem>
             </ComboBox>
-            <Button Name="btnRefresh" Content="Refresh" Style="{StaticResource buttonstyle2}"/>
-            <Button Name="btnCreate" Content="Create" Style="{StaticResource buttonstyle2}"/>
-            <Button Name="btnEdit" Content="Edit" Style="{StaticResource buttonstyle2}"/>
-            <Button Name="btnDelete" Content="Delete" Style="{StaticResource buttonstyle2}"/>
+            <Button Name="btnRefresh" Content="Refresh" Style="{StaticResource buttonstyle2}" Click="btnRefresh_Click"/>
+            <Button Name="btnCreate" Content="Create" Style="{StaticResource buttonstyle2}" Click="btnCreate_Click"/>
+            <Button Name="btnEdit" Content="Edit" Style="{StaticResource buttonstyle2}" Click="btnEdit_Click"/>
+            <Button Name="btnDelete" Content="Delete" Style="{StaticResource buttonstyle2}" Click="btnDelete_Click"/>
         </StackPanel>
         <ListBox Name="lstFee" Grid.Row="1" Style="{StaticResource lstStyle }" ItemTemplate="{StaticResource lstFeeDT}">
             

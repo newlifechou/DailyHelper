@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using DailyHelper.Models;
+using DailyHelper.Common;
 
 namespace DailyHelper
 {
@@ -24,14 +25,51 @@ namespace DailyHelper
             InitializeComponent();
             LoadData();
         }
+        private FeeDB fdb = new FeeDB();
         private void LoadData()
         {
-            FeeDB fdb = new FeeDB();
             List<Fee> fees = fdb.GetFeeList();
             lstFee.ItemsSource = fees;
-            if (lstFee.Items.Count>0)
+            if (lstFee.Items.Count > 0)
             {
                 lstFee.SelectedIndex = 0;
+            }
+        }
+
+        private void btnRefresh_Click(object sender, RoutedEventArgs e)
+        {
+            LoadData();
+        }
+
+        private void btnCreate_Click(object sender, RoutedEventArgs e)
+        {
+            Fee fee = new Fee();
+            WindowFeeDetails wfd = new WindowFeeDetails();
+            wfd.LoadData(fee);
+            wfd.opType = CrudOP.Create;
+            wfd.Owner = this;
+            wfd.ShowDialog();
+        }
+
+        private void btnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            Fee fee = lstFee.SelectedItem as Fee;
+            WindowFeeDetails wfd = new WindowFeeDetails();
+            wfd.LoadData(fee);
+            wfd.opType = CrudOP.Update;
+            wfd.Owner = this;
+            wfd.ShowDialog();
+        }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            if (lstFee.SelectedItems.Count > 0)
+            {
+                int id = (lstFee.SelectedItem as Fee).ID;
+                if (MessageBox.Show("Are you sure to delete this record?", "Deleting?", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                {
+                    fdb.Delete(id);
+                }
             }
         }
     }
