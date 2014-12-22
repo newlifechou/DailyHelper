@@ -45,6 +45,7 @@ namespace DailyHelper
         {
             Fee fee = new Fee();
             fee.ItemTime = DateTime.Now;
+            fee.ReimburseTime = DateTime.Now;
             WindowFeeDetails wfd = new WindowFeeDetails();
             wfd.LoadData(fee);
             wfd.opType = CrudOP.Create;
@@ -77,6 +78,7 @@ namespace DailyHelper
                 if (MessageBox.Show("Are you sure to delete this record?", "Deleting?", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                 {
                     fdb.Delete(id);
+                    LoadData();
                 }
             }
         }
