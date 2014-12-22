@@ -8,7 +8,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Orientation="Horizontal">
-            <ComboBox Name="cboFilter" SelectedIndex="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <ComboBox Name="cboFilter" SelectedIndex="0" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5">
                 <ComboBoxItem>未报销</ComboBoxItem>
                 <ComboBoxItem>已报销</ComboBoxItem>
                 <ComboBoxItem>全部</ComboBoxItem>

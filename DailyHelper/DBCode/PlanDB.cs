@@ -67,12 +67,12 @@ namespace DailyHelper
                 "values(?,?,?,?,?,?,?,?,?)";
                 OleDbParameter[] paras = new OleDbParameter[] { 
                 new OleDbParameter("?",plan.Title),
-                new OleDbParameter("?",plan.Content),
+                new OleDbParameter("?",CheckDbNull.Check(plan.Content)),
                 new OleDbParameter("?",plan.StartTime),
                 new OleDbParameter("?",plan.EndTime),
                 new OleDbParameter("?",plan.Priority),
                 new OleDbParameter("?",plan.IsFinished),
-                new OleDbParameter("?",plan.Remark),
+                new OleDbParameter("?",CheckDbNull.Check(plan.Remark)),
                 new OleDbParameter("?",plan.NeedRemind),
                 new OleDbParameter("?",plan.NeedRemind)
                 };
