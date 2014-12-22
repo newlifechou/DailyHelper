@@ -94,6 +94,7 @@
     <Compile Include="Common\CRUDEnum.cs" />
     <Compile Include="ResourceDictionary\WindowStyle.cs" />
     <Compile Include="Validation\NotNullRule.cs" />
+    <Compile Include="Validation\WindowValid.cs" />
     <Compile Include="ValueConverters\HaveInvoiceConverter.cs" />
     <Compile Include="WindowPlanDetails.xaml.cs">
       <DependentUpon>WindowPlanDetails.xaml</DependentUpon>
