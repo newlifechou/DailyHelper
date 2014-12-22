@@ -10,6 +10,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using DailyHelper.Models;
 
 namespace DailyHelper
 {
@@ -21,6 +22,17 @@ namespace DailyHelper
         public WindowFeeEdit()
         {
             InitializeComponent();
+            LoadData();
+        }
+        private void LoadData()
+        {
+            FeeDB fdb = new FeeDB();
+            List<Fee> fees = fdb.GetFeeList();
+            lstFee.ItemsSource = fees;
+            if (lstFee.Items.Count>0)
+            {
+                lstFee.SelectedIndex = 0;
+            }
         }
     }
 }

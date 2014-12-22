@@ -17,7 +17,7 @@
             <MenuItem Header="Edit">
                 <MenuItem Header="Plan"  Click="menuEditPlan_Click"/>
                 <Separator/>
-                <MenuItem Header="Fee"/>
+                <MenuItem Header="Fee" Click="MenuItem_Click_2"/>
             </MenuItem>
             <MenuItem Header="Help">
                 <MenuItem Header="About"/>

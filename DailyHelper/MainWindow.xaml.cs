@@ -63,5 +63,12 @@ namespace DailyHelper
         {
             LoadData();
         }
+
+        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        {
+            WindowFeeEdit wfe = new WindowFeeEdit();
+            wfe.Owner = this;
+            wfe.Show();
+        }
     }
 }
