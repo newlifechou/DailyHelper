@@ -53,7 +53,6 @@ namespace DailyHelper
                 new OleDbParameter("?",fee.ItemContent),
                 new OleDbParameter("?",fee.Cost),
                 new OleDbParameter("?",fee.HaveInvoice),
-                new OleDbParameter("?",fee.HaveInvoice),
                 new OleDbParameter("?",fee.IsReimburse),
                 new OleDbParameter("?",fee.ReimburseTime)
                 };
@@ -66,7 +65,6 @@ namespace DailyHelper
                 new OleDbParameter("?",fee.ItemTime),
                 new OleDbParameter("?",fee.ItemContent),
                 new OleDbParameter("?",fee.Cost),
-                new OleDbParameter("?",fee.HaveInvoice),
                 new OleDbParameter("?",fee.HaveInvoice),
                 new OleDbParameter("?",fee.IsReimburse),
                 new OleDbParameter("?",fee.ReimburseTime),
