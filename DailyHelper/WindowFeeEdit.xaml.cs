@@ -44,6 +44,7 @@ namespace DailyHelper
         private void btnCreate_Click(object sender, RoutedEventArgs e)
         {
             Fee fee = new Fee();
+            fee.ItemTime = DateTime.Now;
             WindowFeeDetails wfd = new WindowFeeDetails();
             wfd.LoadData(fee);
             wfd.opType = CrudOP.Create;

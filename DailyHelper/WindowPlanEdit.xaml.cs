@@ -86,6 +86,9 @@ namespace DailyHelper
         private void btnCreate_Click(object sender, RoutedEventArgs e)
         {
             Plan newplan = new Plan();
+            newplan.StartTime = DateTime.Now;
+            newplan.EndTime = DateTime.Now;
+            newplan.RemindTime = DateTime.Now;
             WindowPlanDetails wpd = new WindowPlanDetails();
             wpd.LoadData(newplan);
             wpd.OpType = CrudOP.Create;
